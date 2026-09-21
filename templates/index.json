@@ -1,0 +1,284 @@
+[
+  {
+    "id": "O1",
+    "family": "F1 发现驱动方法",
+    "title": "单一反常现象→最小干预",
+    "when": "核心新意是一条稳定、可干预的现象，而不是已有操作的组合。",
+    "avoid": "只在一个挑选的 layer 上画出漂亮分布，却没有对照；或结果只有最终平均分。",
+    "graph": "通常假设→受控异常→候选机制→最小干预→机制/行为验证",
+    "reference_papers": [
+      "P16"
+    ],
+    "relations": "R5/R6",
+    "file": "templates/O1.md"
+  },
+  {
+    "id": "O2",
+    "family": "F1 发现驱动方法",
+    "title": "重要性信号/代理目标错位→重新分配资源",
+    "when": "已有 score/loss 与真正的移除损失、接受率或最终行为不对齐。",
+    "avoid": "只是把 magnitude 改成 Fisher、entropy 改成 flatness，却没有证明错位或代价优势。",
+    "graph": "旧 proxy→真实目标→排序/预算错配→新信号→干预验证",
+    "reference_papers": [
+      "P28",
+      "P39"
+    ],
+    "relations": "R2/R4",
+    "file": "templates/O2.md"
+  },
+  {
+    "id": "O3",
+    "family": "F1 发现驱动方法",
+    "title": "前作扩展上限→解除约束→修复新失效",
+    "when": "已有强方法在增大训练数据、联合范围或模型后受限；解除限制又暴露新问题。",
+    "avoid": "只有一个比前作更好的分数，没有 ceiling 曲线；把同期工作硬说成自己的前作。",
+    "graph": "承认旧机制→受控扩展→上限→解除约束→新失效→配套修复",
+    "reference_papers": [
+      "P24"
+    ],
+    "relations": "R2/R5",
+    "file": "templates/O3.md"
+  },
+  {
+    "id": "M1",
+    "family": "F2 数学结构驱动方法",
+    "title": "等价自由度→压缩目标→变换选择",
+    "when": "存在经过证明的函数等价自由度，可改变数值表达而不改变指定浮点函数。",
+    "avoid": "只说 rotation 不改变范数就推断跨非线性网络等价；忽略 bias、RMSNorm 或在线变换。",
+    "graph": "精确等价条件→自由度→压缩目标→可实现变换",
+    "reference_papers": [
+      "P02",
+      "P03",
+      "P16"
+    ],
+    "relations": "R4/R6",
+    "file": "templates/M1.md"
+  },
+  {
+    "id": "M2",
+    "family": "F2 数学结构驱动方法",
+    "title": "组合目标→可解结构→高效求解器",
+    "when": "问题明确，主要贡献是利用特殊结构降低联合搜索或验证成本。",
+    "avoid": "理论仅证明某个子步骤下降，却声称全局最优；未计候选构造和排序成本。",
+    "graph": "原目标→不可计算瓶颈→代理/结构→求解器→复杂度与质量",
+    "reference_papers": [
+      "P11",
+      "P12",
+      "P19",
+      "P20"
+    ],
+    "relations": "R4",
+    "file": "templates/M2.md"
+  },
+  {
+    "id": "M3",
+    "family": "F2 数学结构驱动方法",
+    "title": "目标/信息结构重述→已有工具的新用途",
+    "when": "创新在正确问题建模、可获取的信息或优化目标，不一定是新优化器。",
+    "avoid": "给标准 KL、Hedge 或 SVD 换名；把现成算法的理论算作自己的新定理。",
+    "graph": "旧形式化→信息/目标遗漏→新形式化→估计/求解→验证",
+    "reference_papers": [
+      "P03",
+      "P25",
+      "P36"
+    ],
+    "relations": "R4/R8",
+    "file": "templates/M3.md"
+  },
+  {
+    "id": "M4",
+    "family": "F2 数学结构驱动方法",
+    "title": "联合压缩/顺序不交换→统一目标与预算",
+    "when": "量化、稀疏、低秩或补偿相互改变误差，主张超出单独相加。",
+    "avoid": "只把两个现成操作顺序调用；压缩率或恢复预算不匹配。",
+    "graph": "独立配方→耦合/非交换→联合目标→约束求解→组合收益",
+    "reference_papers": [
+      "P06",
+      "P08",
+      "P18",
+      "P34"
+    ],
+    "relations": "R7/R3",
+    "file": "templates/M4.md"
+  },
+  {
+    "id": "C1",
+    "family": "F3 约束与框架设计",
+    "title": "多个独立失败→并列干预",
+    "when": "两个困难可区分，两个干预可独立定义；共同服务一个明确目标。",
+    "avoid": "看到两个文件就认为两个创新；一个根因被拆成很多重复子问题。",
+    "graph": "共同目标→失败A/失败B→干预A/干预B→集成",
+    "reference_papers": [
+      "P05"
+    ],
+    "relations": "R1/R3",
+    "file": "templates/C1.md"
+  },
+  {
+    "id": "C2",
+    "family": "F3 约束与框架设计",
+    "title": "先保护/分配/构造→再细化/恢复",
+    "when": "两个阶段角色不同，前者提供后者的有用起点或可行域。",
+    "avoid": "两个模块单独效果差就宣称数学上不可分；第二步重复同一打分却叫全局优化。",
+    "graph": "粗粒度决策/保护→中间状态→集合/行为细化→验收",
+    "reference_papers": [
+      "P33",
+      "P15",
+      "P22",
+      "P23"
+    ],
+    "relations": "R2/R5",
+    "file": "templates/C2.md"
+  },
+  {
+    "id": "C3",
+    "family": "F3 约束与框架设计",
+    "title": "两难/两端缺陷→统一桥接",
+    "when": "两个现有范式各有优点却各自失败，新方法利用明确条件在两者间切换或连续化。",
+    "avoid": "仅加权相加两个 loss，未说明冲突、退化情形或选择规则。",
+    "graph": "范式A优缺点↔范式B优缺点→桥接变量→自适应路径",
+    "reference_papers": [
+      "P10",
+      "P29"
+    ],
+    "relations": "R8/R7",
+    "file": "templates/C3.md"
+  },
+  {
+    "id": "S1",
+    "family": "F4 系统驱动",
+    "title": "资源瓶颈随工作负载迁移→重新设计",
+    "when": "batch/context/硬件改变主瓶颈，从而改变算法收益。",
+    "avoid": "只在一块GPU一个batch上测快了，就宣布新系统规律。",
+    "graph": "工作负载空间→profiling→瓶颈边界→设计→Pareto",
+    "reference_papers": [
+      "P14"
+    ],
+    "relations": "R6",
+    "file": "templates/S1.md"
+  },
+  {
+    "id": "S2",
+    "family": "F4 系统驱动",
+    "title": "格式/表示/硬件协同设计",
+    "when": "支持的数据格式、布局或算子形状直接约束算法，而非最后补 kernel。",
+    "avoid": "只报告平均 bit；无 scale/索引/残差/对齐开销；把 fake quant 当原生低 bit。",
+    "graph": "硬件约束→表示空间→数值算法↔布局内核→端到端",
+    "reference_papers": [
+      "P16",
+      "P17",
+      "P32",
+      "P41"
+    ],
+    "relations": "R6",
+    "file": "templates/S2.md"
+  },
+  {
+    "id": "S3",
+    "family": "F4 系统驱动",
+    "title": "串行路径→并行/在线计划→失败回退",
+    "when": "价值在关键路径或调度变化；额外总工作可能上升。",
+    "avoid": "只测计算核的加速；忽略额外GPU、通信、预测失败与调度开销。",
+    "graph": "串行等待→并行机会→不确定分支→调度/缓存/回退→系统",
+    "reference_papers": [
+      "P35"
+    ],
+    "relations": "R6/R7",
+    "file": "templates/S3.md"
+  },
+  {
+    "id": "U1",
+    "family": "F5 理解与规律",
+    "title": "现象刻画→机制区分→边界/建议",
+    "when": "主要贡献是让社区理解何时为什么有效，配方可以很简单。",
+    "avoid": "大量图表但没有研究问题；只用相关性讲唯一因果；强塞一个大方法。",
+    "graph": "研究疑问→系统测量→备选机制→区分实验→边界→建议",
+    "reference_papers": [
+      "P07",
+      "P32"
+    ],
+    "relations": "R5",
+    "file": "templates/U1.md"
+  },
+  {
+    "id": "U2",
+    "family": "F5 理解与规律",
+    "title": "经验规律/Scaling→预测→资源规划",
+    "when": "拟合关系能对未见规模/预算产生有用预测。",
+    "avoid": "只画拟合线；训练点拟合好就声称规律；未见条件用了调参数据。",
+    "graph": "多维扫描→紧凑规律→留出预测→预算决策→外推边界",
+    "reference_papers": [
+      "P21",
+      "P31"
+    ],
+    "relations": "R5",
+    "file": "templates/U2.md"
+  },
+  {
+    "id": "U3",
+    "family": "F5 理解与规律",
+    "title": "共同假设不成立/负结果→条件性结论",
+    "when": "推翻的是具体可测假设，可能没有新算法。",
+    "avoid": "“某方法没跑好”就归因于理论错误；只选最弱baseline。",
+    "graph": "可检验常识→公平协议→反例/负结果→原因→条件修正",
+    "reference_papers": [
+      "P06",
+      "P32"
+    ],
+    "relations": "R7",
+    "file": "templates/U3.md"
+  },
+  {
+    "id": "T1",
+    "family": "F6 理论",
+    "title": "定义→主定理/上下界→解释→可选实验",
+    "when": "主要知识贡献是保证、界、不可达性或条件；算法可能只是构造证据。",
+    "avoid": "将经验趋势伪装成定理；理论对象和工程任务之间没有映射。",
+    "graph": "现实问题→精确定义→已有界缺口→主定理→条件/推论",
+    "reference_papers": [
+      "P30"
+    ],
+    "relations": "R4",
+    "file": "templates/T1.md"
+  },
+  {
+    "id": "T2",
+    "family": "F6 理论",
+    "title": "规范分解/表示等价→复杂度与求解",
+    "when": "新意是把不同数学表示统一，产生可证明或可计算结果。",
+    "avoid": "把等价当近似或反之；忽略指数规模构造；“global”无条件化。",
+    "graph": "已知表示A/B→差距→等价/分解→结构计算→特例/边界",
+    "reference_papers": [
+      "P12",
+      "P37"
+    ],
+    "relations": "R4/R8",
+    "file": "templates/T2.md"
+  },
+  {
+    "id": "P1",
+    "family": "F7 问题与评价",
+    "title": "新设定/新问题定义→必要性→最小基线",
+    "when": "贡献首先是一个可操作的新设定；不自动意味着首次提出。",
+    "avoid": "只是换模型名字；“第一”只有搜索印象；问题定义同时暗中偏袒自家方法。",
+    "graph": "新条件→旧定义失效→问题契约→诊断基线→方法或议程",
+    "reference_papers": [
+      "P05"
+    ],
+    "relations": "R8",
+    "file": "templates/P1.md"
+  },
+  {
+    "id": "P2",
+    "family": "F7 问题与评价",
+    "title": "评价缺口→统一协议→可改变决策的发现",
+    "when": "价值是公平评价和原有基准无法显示的选型信息，不必有新主算法。",
+    "avoid": "只堆模型和指标；评价数据污染；只选择有利工作负载。",
+    "graph": "新使用场景→旧基准盲区→协议→系统对照→决策启示",
+    "reference_papers": [
+      "P42"
+    ],
+    "relations": "R8",
+    "file": "templates/P2.md"
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "as_of": "2026-09-20",
+  "officially_accepted_papers": 42,
+  "reading_levels": {
+    "A": 21,
+    "B": 21
+  },
+  "venue_counts": {
+    "ICLR 2025": 15,
+    "ICML 2025": 8,
+    "NeurIPS 2025": 6,
+    "ICLR 2026": 13
+  },
+  "skill_modules": 14,
+  "skill_project_families": 6,
+  "primary_families": 7,
+  "narrative_templates": 20,
+  "exhaustive_literature_review": false,
+  "third_party_skills_executed": false,
+  "llm_writing_quality_evaluations": 0,
+  "papers_reproduced": 0,
+  "gaps": [
+    "ICML2026 papers not reliably collected",
+    "NeurIPS2026 notifications after cutoff",
+    "ICML2025 structure-depth subset contains only FlatQuant",
+    "No full-paper proof/result verification",
+    "Mutable third-party skill revisions not commit pinned"
+  ]
+}

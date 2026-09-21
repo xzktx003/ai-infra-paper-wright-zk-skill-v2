@@ -1,0 +1,11 @@
+{
+  "static_checks": "passed",
+  "unique_papers": 42,
+  "unique_templates": 20,
+  "local_markdown_links": "passed",
+  "json_parse": "passed",
+  "frontmatter": "passed",
+  "deterministic_tests_passed": 26,
+  "deterministic_tests_total": 26,
+  "scientific_or_llm_quality_validation": false
+}
