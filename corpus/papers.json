@@ -57,7 +57,7 @@
     "classification_status": "structure-checked-partial",
     "story": "以激活相关重构目标审视量化误差的低秩恢复，强调解析形式而非仅权重空间启发式。",
     "caution": "两种应用是同一框架的实例；不要把低秩初始化收益写成推理吞吐收益。",
-    "structure_source": "https://arxiv.org/html/2410.06040",
+    "structure_source": "https://proceedings.iclr.cc/paper_files/paper/2025/file/21718991f6acf19a42376b5c7a8668c5-Paper-Conference.pdf",
     "intro_moves": [
       "部署与微调分别昂贵，先确立共用问题。",
       "用低秩补偿公式把 QPEFT 与 PTQ 放进同一框架，而非先介绍两个新模块。",
@@ -76,8 +76,9 @@
     ],
     "relation": "R8",
     "story_graph": "共同重构问题→目标纠偏→解析解→两种应用",
-    "source_version": "作者 arXiv HTML；正式录用另由官方页面核验；此链接为访问时版本，未固定 revision",
-    "locators": "§1、§2 与解析贡献说明"
+    "source_version": "2026-09-22 用正式 PDF 补核开篇；初次记录另读作者 arXiv HTML 2410.06040，未固定 revision",
+    "locators": "初次 §1、§2 与解析贡献说明；正式版补读摘要与完整引言 pp.1–3",
+    "opening_sections_checked_on": "2026-09-22"
   },
   {
     "id": "P04",
@@ -451,8 +452,8 @@
     "template_candidate": "O1",
     "classification_status": "structure-checked-partial",
     "story": "变换后分布仍不平坦，进而优化仿射变换，并处理其执行代价。",
-    "caution": "不是所有辅助裁剪都要成为贡献；本卡用 arXiv v4，不能把其后增补实验全当录用时正文。",
-    "structure_source": "https://arxiv.org/html/2410.09426v4",
+    "caution": "不是所有辅助裁剪都要成为贡献；补读正式版开篇不等于复现实验，不把 arXiv v4 后增补实验自动算作录用时正文。",
+    "structure_source": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/sun25l/sun25l.pdf",
     "intro_moves": [
       "从模型成本进入量化，而非长篇介绍所有量化算法。",
       "用分布平坦性建立误差视角。",
@@ -472,8 +473,9 @@
     ],
     "relation": "R6",
     "story_graph": "分布平坦性不足→可学习变换→约束变换开销→融合实现",
-    "source_version": "arXiv v4，2025-08-10；与正式会议版本可能存在差异",
-    "locators": "§1–4 目录、§1–2 关键段落"
+    "source_version": "2026-09-22 用正式 PDF 补核开篇；初次记录使用 arXiv v4，2025-08-10",
+    "locators": "初次 §1–4 目录、§1–2 关键段落；正式版摘要、完整引言、Motivation、Method 开头 pp.1–4",
+    "opening_sections_checked_on": "2026-09-22"
   },
   {
     "id": "P17",
@@ -612,15 +614,28 @@
     "official_pdf_url": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/he25m/he25m.pdf",
     "status": "accepted-official-proceedings",
     "checked_on": "2026-09-20",
-    "reading_depth": "A:abstract",
+    "reading_depth": "B:introduction-and-selected-body",
     "template_candidate": "C2",
-    "classification_status": "provisional-abstract-based",
-    "story": "以无需重新训练的结构化剪枝作为资源约束。",
+    "classification_status": "structure-checked-partial",
+    "story": "重训练成本约束→注意力整体压缩对象→按头分解降低成本→FFN 线性校准。",
     "caution": "无需retraining不代表无需校准或统计计算。",
-    "structure_source": null,
-    "intro_moves": [],
-    "section_map": [],
-    "source_notes": []
+    "structure_source": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/he25m/he25m.pdf",
+    "intro_moves": [
+      "从重训练成本限定结构化剪枝的可用路线。",
+      "将相互作用的注意力权重作为整体压缩对象。",
+      "解释按头分解的计算好处与 FFN 线性校准。",
+      "在连续段落中编号概括贡献。"
+    ],
+    "section_map": [
+      "已读方法围绕注意力压缩、按头分解与 FFN 校准展开；其余章节不作完整结构断言。"
+    ],
+    "source_notes": [
+      "2026-09-22 从 A 级补读为 B 级；功能分析不等于原文自然段数量。",
+      "仅核对所列范围，未审查全部证明、图表或复现实验。"
+    ],
+    "source_version": "正式 PMLR 页面所链接的出版方 PDF；访问日期 2026-09-22",
+    "locators": "摘要 p.1，完整引言 pp.1–2，方法 pp.3–4",
+    "opening_sections_checked_on": "2026-09-22"
   },
   {
     "id": "P24",

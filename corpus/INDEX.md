@@ -26,7 +26,7 @@
 | [P20](cards/P20.md) | [NestQuant: nested lattice quantization for matrix products and LLMs](https://proceedings.mlr.press/v267/savkin25a.html) | ICML 2025 | quantization-theory | A | M2 |
 | [P21](cards/P21.md) | [Scaling Laws for Floating–Point Quantization Training](https://proceedings.mlr.press/v267/sun25j.html) | ICML 2025 | quantization-scaling | A | U2 |
 | [P22](cards/P22.md) | [DLP: Dynamic Layerwise Pruning in Large Language Models](https://proceedings.mlr.press/v267/chen25l.html) | ICML 2025 | pruning | A | C2 |
-| [P23](cards/P23.md) | [Olica: Efficient Structured Pruning of Large Language Models without Retraining](https://proceedings.mlr.press/v267/he25m.html) | ICML 2025 | pruning | A | C2 |
+| [P23](cards/P23.md) | [Olica: Efficient Structured Pruning of Large Language Models without Retraining](https://proceedings.mlr.press/v267/he25m.html) | ICML 2025 | pruning | B | C2 |
 | [P24](cards/P24.md) | [EAGLE-3: Scaling up Inference Acceleration of Large Language Models via Training-Time Test](https://proceedings.neurips.cc/paper_files/paper/2025/hash/c7b5a35ea98b62512a869c19ea7b03cb-Abstract-Conference.html) | NeurIPS 2025 | speculative-distillation | B | O3 |
 | [P25](cards/P25.md) | [Quantization Error Propagation: Revisiting Layer-Wise Post-Training Quantization](https://proceedings.neurips.cc/paper_files/paper/2025/hash/df2034a516cbd617a96492cc476276c9-Abstract-Conference.html) | NeurIPS 2025 | quantization | B | M3 |
 | [P26](cards/P26.md) | [DiEP: Adaptive Mixture-of-Experts Compression through Differentiable Expert Pruning](https://proceedings.neurips.cc/paper_files/paper/2025/hash/511c7fd69db9f1ce7492a57285975849-Abstract-Conference.html) | NeurIPS 2025 | moe-pruning | A | C2 |

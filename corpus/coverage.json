@@ -1,9 +1,10 @@
 {
   "as_of": "2026-09-20",
+  "structure_reading_updated_on": "2026-09-22",
   "officially_accepted_papers": 42,
   "reading_levels": {
-    "A": 21,
-    "B": 21
+    "A": 20,
+    "B": 22
   },
   "venue_counts": {
     "ICLR 2025": 15,
@@ -18,11 +19,13 @@
   "exhaustive_literature_review": false,
   "third_party_skills_executed": false,
   "llm_writing_quality_evaluations": 0,
+  "llm_writing_quality_evaluation_scope": "Controlled multi-project A/B; single-executor smoke cases recorded separately",
+  "opening_section_smoke_cases": 5,
   "papers_reproduced": 0,
   "gaps": [
     "ICML2026 papers not reliably collected",
     "NeurIPS2026 notifications after cutoff",
-    "ICML2025 structure-depth subset contains only FlatQuant",
+    "ICML2025 structure-depth subset contains only FlatQuant and Olica",
     "No full-paper proof/result verification",
     "Mutable third-party skill revisions not commit pinned"
   ]
