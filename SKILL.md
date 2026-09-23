@@ -8,11 +8,13 @@ description: >-
   narrative and build paragraph-level Introduction and section plans before prose.
   Also use for contribution-dependency analysis, revisions of the user's own
   manuscript, and ICLR/ICML/NeurIPS English prose checks or polishing (term freeze,
-  subject–connective relations, tense, Chinese-calque). Do not use as a substitute
+  subject–connective relations, tense, Chinese-calque). For 文献检索, 竞品监控,
+  设计实验, 绘图, 思路审核, 审稿, 引用核验, rebuttal, or 投稿检查, read exactly
+  one sibling CCFA skill instead of this writing library. Do not use as a substitute
   for merely translating text, explaining an unrelated public paper, fabricating
   results, or launching experiments.
 metadata:
-  version: "2.0.2"
+  version: "2.0.3"
   language: "zh-CN"
   research-cutoff: "2026-09-20"
 ---
@@ -22,6 +24,31 @@ metadata:
 ## 工作目标
 
 把代码与真实证据还原成可证伪的研究主张，再选择合适叙事，最后生成中文初稿。不是给 A+B+C 起新名字，也不是将固定“背景—缺陷—三个模块”套在每篇论文上。
+
+## CCFA 旁路
+
+只有请求本身属于下表，且不是写稿、叙事、证据主张或英文润色时，才离开后面的写作链。这些技能默认不注册；按本技能目录的同级文件读取，不把它们当作已加载技能调用。
+
+只打开命中的那一个 `SKILL.md`。它自己要求的预检可以读，其余 CCFA 技能不读。文件不存在就说明未装在同级目录，不要编造流程，也不要改走本库模板。
+
+| 请求 | 只读 |
+|---|---|
+| 文献检索、相关工作、benchmark 搜索 | `../ccf-literature-searcher/SKILL.md` |
+| 竞品监控、新论文追踪 | `../ccf-literature-monitor/SKILL.md` |
+| 设计实验、消融、结果表证据结构 | `../ccf-experiment-designer/SKILL.md` |
+| 绘图、排版、架构图 | `../ccf-visual-composer/SKILL.md` |
+| 思路值不值得做、创新够不够 | `../ccf-idea-reviewer/SKILL.md` |
+| 优化或具象化 idea，且交付物不是论文 | `../ccf-idea-optimizer/SKILL.md` |
+| 审稿、硬伤、投稿成熟度，且不改写 | `../ccf-paper-reviewer/SKILL.md` |
+| 引用核验、数字与术语一致性 | `../ccf-integrity-auditor/SKILL.md` |
+| 审稿意见回复、rebuttal | `../ccf-rebuttal-writer/SKILL.md` |
+| 投稿格式、页数、匿名、PDF | `../ccf-submission-checker/SKILL.md` |
+| 明确要求把 PDF 收成写作范例卡 | `../ccf-paper-to-exemplar/SKILL.md` |
+| CCF 项目目录或 LaTeX 脚手架 | `../ccf-project-scaffolder/SKILL.md` |
+| 明确要求拆阶段并维护 `ccfa.yaml` | `../ccf-pipeline-orchestrator/SKILL.md` |
+| 明确要求维护 CCFA skill | `../ccf-skill-forger/SKILL.md` |
+
+写稿、改结构、叙事路由和英文润色留在本技能，不转给 `ccf-paper-writer`。本技能仍不打分、不预测录用、不启动实验。
 
 ## 第一步：判定任务与输入
 
@@ -35,7 +62,7 @@ metadata:
 
 ## 按需加载，而不是读取整个库
 
-所有路径相对本 Skill 目录。
+若请求已转到上一节的 CCFA 技能，不要执行本节。所有路径相对本 Skill 目录。
 
 1. 先读 `references/evidence-contract.md` 和 `references/router.md`。
 2. 方法不止一个组件时，读 `references/relations.md`。

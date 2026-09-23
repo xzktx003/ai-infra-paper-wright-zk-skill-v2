@@ -6,7 +6,7 @@
 
 ## 从哪里读
 
-- `SKILL.md`：智能体入口和执行顺序。
+- `SKILL.md`：智能体入口和执行顺序。CCFA 旁路只在检索、实验设计、绘图、审稿、rebuttal、投稿检查等请求命中时，读取同级的一个技能文件。
 - `references/opening-sections.md`：中英文开篇的信息组织、技术细节准入和去重复检查；[六篇实例及例外](references/opening-sections-examples.md)提供正式论文来源。
 - `HANDBOOK.zh-CN.md`：研究与使用手册，包含调研、路由、关系及全部模板。
 - `references/existing-skills-survey.md`：14 个真实模块、6 个项目族的取舍。
